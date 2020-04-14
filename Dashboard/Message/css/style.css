@@ -1,0 +1,287 @@
+body{
+	font: 15px/1.5 Arial, Helvetica,sans-serif;
+	padding:0;
+	background-color: #f4f4f4;
+
+
+}
+
+
+
+/*menu*/
+
+.menu{
+			--duration:.5s;
+			--easing:ease-in-out;
+			position: relative;
+			clear: both;
+			margin: 20px;
+			float: left;
+			width: 18%;
+		}
+		
+		.menu ol{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu li{
+			margin: -4px 0 0 0;
+		}
+
+		.menu a{
+			display: block;
+			text-decoration: none;
+			background: white;
+			transform-origin: 0 0;
+			transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+			transition-delay: var(--delay-out)
+			border-radius: 4px;
+			padding: 1em 1.52em;
+			color: #18714f;
+			text-transform: uppercase;
+	font-size: 14px;
+			font-weight: bold;
+
+		}
+		.menu a:hover{
+			background: #efefef;
+		}
+		.menu .sub-menu{
+			font-size: .9em;
+			color: #666666;
+			border-left: 2em solid white;
+			padding: .75em;
+			background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+		}
+
+		.menu .sub-menu a:hover{
+			background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+		}
+
+		.menu .header{
+			font-weight: 600;
+			display: block;
+			background: rgba(255,255,255,0.5);
+			transform-origin: 0 0;
+			transition: var(--duration) var(--easing), color var(--duration) var(--easing);
+			border-radius: 4px;
+			padding: 1em 1.52em;
+		}
+
+		.menu .header span{
+			border:none;
+			background: transparent;
+			font-size: 1.5em;
+			padding: 0;
+			cursor: pointer;
+			line-height: 1;
+			float: right;
+		}
+		.menu .footer button{
+			position: absolute;
+			top: o;
+			left: 0;
+			border:none;
+			padding: calc(1em - 2em);
+			width: 100%;
+			transform-origin: 0 0;
+			transition: transform var(--duration) var(--easing);
+			transition-delay: calc(var(--duration) + (var(--count) / 2));
+			cursor: pointer;
+			outline: none;
+			background: #cdcdcd;
+			opacity: 0;
+		}
+
+		.menu.closed a, .menu.closed header{
+			transform: translateY(calc(--top) * -1) scaleY(0.1) scaleX(0.2);
+			transition-delay: var(--delay-in);
+			color: transparent;
+		}
+		.menu .closed .footer button{
+			transition-delay: 0s;
+			transform: translateY(0.7) scaleX(0.2);
+		}
+
+
+
+
+
+
+
+/*header*/
+header{
+	background:#35424a;
+	color:#ffffff;
+	padding-top: 2px;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+	
+}
+
+header a{
+	color:#ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+header li{
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding{
+	padding-top: 2px;
+	float: left;
+
+}
+
+header #branding h1{
+		margin: 0;
+}
+
+header nav #list{
+	float: right;
+}
+header .highlight, header .current a{
+	color: #e8491d;
+	font-weight: bold;
+}
+header a:hover{
+	color: #cccccc;
+	font-weight: bold;
+}
+
+
+
+/*showcase*/
+
+
+/*sidebar*/
+
+
+/*.dark{
+	padding: 15px;
+	background:#35424a;
+	color: #ffffff;
+	margin-top: 10px;
+	
+	height: 50px;
+}*/
+.ft{
+	background: rgba(255,255,200,5);
+	border-radius: 4px;
+}
+/*showcase*/
+#showcase .container{
+	min-height: 1px;
+		background-color: white;
+	color:black;
+	width: 100%;
+	border-radius: 10px;
+margin-top: 20px;
+float: left;
+
+}
+
+
+
+#showcase{
+	min-height: 1px;
+		
+	color:black;
+	width: 54%;
+	
+	border-radius: 10px;
+margin-top: 20px;
+float: left;
+
+}
+
+#showcase h1{
+	margin-top:100px
+	font-size:55px;
+	margin-bottom:10px;
+}
+
+#showcase .ttle{
+	font-size: 20px;
+}
+
+
+
+
+aside#sidebar{
+	width: 24%;
+	min-height: 10px;
+	background-color: white;
+	color: black;
+	
+	border-radius: 10px;
+margin-top: 20px;
+float: right;
+}
+
+aside#ads{
+	width: 24%;
+	max-height: 300px;
+	background-color: white;
+	color: black;
+	
+	border-radius: 10px;
+margin-top: 20px;
+float: right;
+}
+
+aside#back{/*position: fixed;*/
+	width: 24%;
+	min-height: 10px;
+	background-color: white;
+	color: black;
+	
+	border-radius: 10px;
+margin-top: 20px;
+float: right;
+}
+
+
+
+
+
+@media(max-width: 768px){
+	header{position: fixed;
+		z-index: 100000;
+		margin-top: 0;}
+	nav{display: ;
+
+	}
+	
+	section.menu, section#sidebar{display: none;}
+
+	header #branding, header nav, header nav li, #newslatter h1,
+	 #newslatter form, #author .author, article#main-col{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+section#showcase image{
+	width: 100px;
+	float: left;
+
+
+	}
+	.pr{
+		float: right;
+
+
+	}
+	section#showcase
+	{
+		width: 100%;
+		margin-top: 170px;
+	}
+
+}
